@@ -3,29 +3,16 @@ import './App.css';
 import { Span } from './components/Span';
 import { useState } from 'react';
 
-function App() {
-  const[count,setCount] = useState(0)
 
-  // const item = () => {
-  //   setCount((prevState)=> {
-  //     return{
-  //       ...prevState,
-  //       count:prevState.count+1
-  //     }
-  //   })
-  // }
-  const decrementCount = ()=> {
-    setCount((prevCount)=> {
-      return prevCount - 1
-    })
-  }
+function App() {
+  const [count,setCount] = useState(0)
   return (
     <div className="App">
-    <Span span = '0'/>
-    <Button button = '+'/>
-    <Button button = '-' onClick = {decrementCount}/>
+    <Span span = {count}/>
+    <Button setCount = {setCount} title = '+'/>
+    <Button setCount = {setCount} title = '-' />
     </div>
   );
-}
-
+  }
+  
 export default App;
