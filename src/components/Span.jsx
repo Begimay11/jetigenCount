@@ -1,3 +1,3 @@
 export const Span = (props)=> {
-    return <span className="span">{props.span}</span>
+    return <h2 className="span">{props.span}</h2>
 }
